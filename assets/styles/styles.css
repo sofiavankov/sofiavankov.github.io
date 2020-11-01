@@ -35,6 +35,10 @@ h2 {
     color: #f37c20;
 }
 
+.header__title img {
+    width: 60px;
+}
+
 .header__logo img{
     height: 75px;
     padding-left: 12px;
