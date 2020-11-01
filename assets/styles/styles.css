@@ -93,6 +93,22 @@ h2 {
     padding: 2rem;
 }
 
+.content img {
+    width: 400px;
+}
+
+#cards img {
+    width: 600px;
+}
+
+#puzzle7_1 {
+    width: 200px;
+}
+
+#puzzle7_2 {
+    width: 600px;
+}
+
 .content h1 {
     font-size: 3rem;
     margin-top: -10px;
