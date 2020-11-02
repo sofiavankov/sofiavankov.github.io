@@ -28,13 +28,13 @@ $(document).ready(function () {
         check_answer_7();
     });
 
-    // $("#button8").on('click', function () {
-    //     check_answer_8();
-    // });
+    $("#button8").on('click', function () {
+        check_answer_8();
+    });
 
-    // $("#button9").on('click', function () {
-    //     check_answer_9();
-    // });
+    $("#button9").on('click', function () {
+        check_answer_9();
+    });
 
     // $("#button10").on('click', function () {
     //     check_answer_10();
@@ -42,7 +42,7 @@ $(document).ready(function () {
 });
 
 function check_answer_1() {
-    var correct_answer = "3612";
+    var correct_answer = "24";
     var answer = $('#answer1').val();
     if (correct_answer == answer) {
         alert("The answer is CORRECT :D");
@@ -54,7 +54,7 @@ function check_answer_1() {
 
 function check_answer_2() {
 
-    var correct_answer = "868788899091";
+    var correct_answer = "581321";
     var answer = $('#answer2_1').val();
     if (correct_answer == answer) {
         alert("The answer is CORRECT :D");
@@ -65,7 +65,7 @@ function check_answer_2() {
 }
 
 function check_answer_3() {
-    var correct_answer = "h";
+    var correct_answer = "87";
     var answer = $('#answer3').val();
     if (correct_answer == answer) {
         alert("The answer is CORRECT :D");
@@ -76,7 +76,7 @@ function check_answer_3() {
 }
 
 function check_answer_4() {
-    var correct_answer = "handkerchief";
+    var correct_answer = "h";
     var answer = $('#answer4').val();
     if (correct_answer == answer) {
         alert("The answer is CORRECT :D");
@@ -87,7 +87,7 @@ function check_answer_4() {
 }
 
 function check_answer_5() {
-    var correct_answer_1 = "skeleton";
+    var correct_answer_1 = "handkerchief";
     var answer1 = $('#answer5').val();
     if (correct_answer_1 == answer1) {
         alert("The first answer is CORRECT :D");
@@ -98,7 +98,7 @@ function check_answer_5() {
 }
 
 function check_answer_6() {
-    var correct_answer = "6310";
+    var correct_answer = "devil";
     var answer = $('#answer6').val();
     if (correct_answer == answer) {
         alert("The answer is CORRECT :D");
@@ -109,8 +109,30 @@ function check_answer_6() {
 }
 
 function check_answer_7() {
-    var correct_answer = "genius";
+    var correct_answer = "6310";
     var answer = $('#answer7').val();
+    if (correct_answer == answer) {
+        alert("The answer is CORRECT :D");
+        window.open("https://sofiavankov.github.io/h9b1f25e67fe-puzzle8.html", "_self")
+    } else {
+        alert("The answer is INCORRECT :(");
+    }
+}
+
+function check_answer_8() {
+    var correct_answer = "trick or treat?";
+    var answer = $('#answer8').val();
+    if (correct_answer == answer) {
+        alert("The answer is CORRECT :D");
+        window.open("https://sofiavankov.github.io/i106264a93-puzzle9.html", "_self")
+    } else {
+        alert("The answer is INCORRECT :(");
+    }
+}
+
+function check_answer_9() {
+    var correct_answer = "genius";
+    var answer = $('#answer9').val();
     if (correct_answer == answer) {
         alert("WELL DONE! You found all the clues and made it to the rooftop! What can I say, Halloween suits you!");
     } else {
