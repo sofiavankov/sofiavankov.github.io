@@ -48,42 +48,42 @@ function playGif() {
 
 function showProject() {
     $("#project-1").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img1.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img1.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-2").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img2.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img2.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-3").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img3.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img3.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-4").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img4.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img4.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-5").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img5.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img5.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-6").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img6.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img6.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-7").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img7.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img7.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-8").hover(function () {
-        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img8.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img8.jpg')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
