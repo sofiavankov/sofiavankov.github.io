@@ -1,171 +1,91 @@
 $(document).ready(function () {
-
-    $("#button1").on('click', function () {
-        check_answer_1();
+    $("#about").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#aboutsection").offset().top
+        }, 1000);
     });
 
-    $("#button2").on('click', function () {
-        check_answer_2();
+    $("#contact").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#contactsection").offset().top
+        }, 1000);
     });
 
-    $("#button3").on('click', function () {
-        check_answer_3();
-    });
+    playGif();
 
-    $("#button4").on('click', function () {
-        check_answer_4();
-    });
+    showProject();
 
-    $("#button5").on('click', function () {
-        check_answer_5();
-    });
+    removeText();
 
-    $("#button6").on('click', function () {
-        check_answer_6();
-    });
 
-    $("#button7").on('click', function () {
-        check_answer_7();
-    });
-
-    $("#button8").on('click', function () {
-        check_answer_8();
-    });
-
-    $("#button9").on('click', function () {
-        check_answer_9();
-    });
-
-    // $("#button10").on('click', function () {
-    //     check_answer_10();
-    // });
 });
 
-function check_answer_1() {
-    var correct_answer = "24";
-    var answer = $('#answer1').val();
-    if (correct_answer == answer) {
-        alert("The answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/b5d5349715-puzzle2.html", "_self")
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
+function removeText() {
+
 }
 
-function check_answer_2() {
+function playGif() {
+    var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+    ];
+    var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+    html.data('scroll-position', scrollPosition);
+    html.data('previous-overflow', html.css('overflow'));
+    html.css('overflow', 'hidden');
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
-    var correct_answer = "581321";
-    var answer = $('#answer2_1').val();
-    if (correct_answer == answer) {
-        alert("The answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/c7efee1b1-puzzle3.html", "_self")
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
+    setTimeout(function () {
+        $("#site-gif").addClass("no-show");
+
+        var html = jQuery('html');
+        var scrollPosition = html.data('scroll-position');
+        html.css('overflow', html.data('previous-overflow'));
+        window.scrollTo(scrollPosition[0], scrollPosition[1])
+    }, 8700);
+
 }
 
-function check_answer_3() {
-    var correct_answer = "87";
-    var answer = $('#answer3').val();
-    if (correct_answer == answer) {
-        alert("The answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/d98760785a-puzzle4.html", "_self")
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
+function showProject() {
+    $("#project-1").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img1.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+    $("#project-2").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img2.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+    $("#project-3").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img3.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+    $("#project-4").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img4.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+    $("#project-5").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img5.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+    $("#project-6").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img6.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+    $("#project-7").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img7.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+    $("#project-8").hover(function () {
+        $(".projects__image").css("background-image", "url('../test-slide/assets/img/cover/img8.jpg')");
+    }, function () {
+        $(".projects__image").css("background-image", "none");
+    });
+
 }
-
-function check_answer_4() {
-    var correct_answer = "h";
-    var answer = $('#answer4').val();
-    if (correct_answer == answer) {
-        alert("The answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/e5b8e12c14-puzzle5.html", "_self")
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
-}
-
-function check_answer_5() {
-    var correct_answer_1 = "handkerchief";
-    var answer1 = $('#answer5').val();
-    if (correct_answer_1 == answer1) {
-        alert("The first answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/f8f436cf2-puzzle6.html", "_self")
-    } else {
-        alert("The first answer is INCORRECT :(");
-    }
-}
-
-function check_answer_6() {
-    var correct_answer = "devil";
-    var answer = $('#answer6').val();
-    if (correct_answer == answer) {
-        alert("The answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/g173dd3768-puzzle7.html", "_self")
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
-}
-
-function check_answer_7() {
-    var correct_answer = "6310";
-    var answer = $('#answer7').val();
-    if (correct_answer == answer) {
-        alert("The answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/h9b1f25e67fe-puzzle8.html", "_self")
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
-}
-
-function check_answer_8() {
-    var correct_answer = "trick or treat?";
-    var answer = $('#answer8').val();
-    if (correct_answer == answer) {
-        alert("The answer is CORRECT :D");
-        window.open("https://sofiavankov.github.io/i106264a93-puzzle9.html", "_self")
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
-}
-
-function check_answer_9() {
-    var correct_answer = "genius";
-    var answer = $('#answer9').val();
-    if (correct_answer == answer) {
-        alert("WELL DONE! You found all the clues and made it to the rooftop! What can I say, Halloween suits you!");
-    } else {
-        alert("The answer is INCORRECT :(");
-    }
-}
-
-// function check_answer_8() {
-//     var correct_answer = "38";
-//     var answer = $('#answer8').val();
-//     if (correct_answer == answer) {
-//         alert("The answer is CORRECT :D");
-//     } else {
-//         alert("The answer is INCORRECT :(");
-//     }
-// }
-
-// function check_answer_9() {
-//     var correct_answer = "hard";
-//     var answer = $('#answer9').val();
-//     if (correct_answer == answer) {
-//         alert("The answer is CORRECT :D");
-//     } else {
-//         alert("The answer is INCORRECT :(");
-//     }
-// }
-
-// function check_answer_10() {
-//     var correct_answer = "7";
-//     var answer = $('#answer10').val();
-//     if (correct_answer == answer) {
-//         alert("The answer is CORRECT :D");
-//     } else {
-//         alert("The answer is INCORRECT :(");
-//     }
-// }
