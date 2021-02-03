@@ -16,7 +16,10 @@
 </head>
 
 <body>
-	<div class="navigation navigation--transparent">
+	<div class="logo logo--rel">
+		<a href="index.html"><img src="./assets/img/logo.png"></a>
+	</div>
+	<div class="navigation navigation--transparent navigation--rel">
 		<ul class="navigation__list">
 			<li class="navigation__item"><a id="portfolio" href="portfolioindex.html"><span>portfolio</span></a>
 			</li>
@@ -123,16 +126,129 @@
 			</div>
 		</section>
 	</div>
-
+	<div class="project--mobile">
+		<div class="project">
+			<img class="project__cover" src="./assets/img/aam11/cover.jpg">
+			<h1 class="project__title">ANANAS</h1>
+			<p class="project__description">Arte Ananas is a Contemporary Movement that aims to fuse Mexico’s
+				art, society and agriculture with nature.
+				For this rebranding, we chose a sophisticated, yet bold proposal in which color refers you to
+				the richness of Mexico in a non obvious way.
+			</p>
+			<p class="project__specs">
+				Type of work: Branding, Art direction & Photography <br>
+				Realization: 2020
+			</p>
+			<div class="project__images">
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img1.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img2.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img3.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img4.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img5.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img6.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img7.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img8.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img9.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img10.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img11.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img12.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/agananas/img13.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/agananas/watermark.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/hps.js"></script>
 	<script type="text/javascript">
-		var scroller = new HPS('.page-wrapper', {
-			ease: 0.08,
-		});
+		document.addEventListener("DOMContentLoaded", function (event) {
+			if (window.innerWidth >= 1440) {
+				var scroller = new HPS('.page-wrapper', {
+					ease: 0.08,
+				});
 
-		window.onload = function () {
-			document.querySelector('.color-box').classList.add('slide');
-		}
+				window.onload = function () {
+					document.querySelector('.color-box').classList.add('slide');
+				}
+			}
+		});
+		window.addEventListener("resize", function () {
+			if (window.innerWidth >= 1440) {
+				var scroller = new HPS('.page-wrapper', {
+					ease: 0.08,
+				});
+
+				window.onload = function () {
+					document.querySelector('.color-box').classList.add('slide');
+				}
+				location.reload();
+			} else if (window.innerWidth < 1440) {
+				location.reload();
+			}
+
+		}, true);
 	</script>
 </body>
 

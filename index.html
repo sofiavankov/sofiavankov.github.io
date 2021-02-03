@@ -3,6 +3,7 @@
 <head>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>House of ERA</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -13,14 +14,17 @@
 </head>
 
 <body>
-    <div id="site-gif" class="show"></div>
+    <!-- <div id="site-gif" class="show"></div> -->
     <div class="site">
+        <div class="logo">
+            <a href="index.html"><img src="./assets/img/logo.png"></a>
+        </div>
         <div class="navigation">
             <ul class="navigation__list">
                 <li class="navigation__item"><a id="portfolio" href="portfolioindex.html"><span>portfolio</span></a>
                 </li>
-                <li class="navigation__item"><a id="about" href="#"><span>about us</span></a></li>
-                <li class="navigation__item"><a id="contact" href="#"><span>contact</span></a></li>
+                <li class="navigation__item"><a id="about" href="#"><span id="aboutspan">about us</span></a></li>
+                <li class="navigation__item"><a id="contact" href="#"><span id="contactspan">contact</span></a></li>
             </ul>
         </div>
         <div class="outer-wrapper">
@@ -97,11 +101,5 @@
         </div>
     </div>
 </body>
-<script src="assets/js/hps.js"></script>
-<script type="text/javascript">
-    var scroller = new HPS('.page-wrapper', {
-        ease: 0.08,
-    });
-</script>
 
 </html>

@@ -11,12 +11,25 @@ $(document).ready(function () {
         }, 1000);
     });
 
-    playGif();
+    $("#contactsection").hover(function () {
+        $("#contactspan").addClass("underlined");
+    }, function () {
+        $("#contactspan").removeClass("underlined");
+    });
+
+    $("#aboutsection").hover(function () {
+        $("#aboutspan").addClass("underlined");
+    }, function () {
+        $("#aboutspan").removeClass("underlined");
+    });
+
+    //playGif();
 
     showProject();
 
     removeText();
 
+    $(".projects").addClass("show-projects");
 
 });
 
@@ -25,24 +38,24 @@ function removeText() {
 }
 
 function playGif() {
-    var scrollPosition = [
-        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-        self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-    ];
-    var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
-    html.data('scroll-position', scrollPosition);
-    html.data('previous-overflow', html.css('overflow'));
-    html.css('overflow', 'hidden');
-    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+    // var scrollPosition = [
+    //     self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+    //     self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+    // ];
+    // var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+    // html.data('scroll-position', scrollPosition);
+    // html.data('previous-overflow', html.css('overflow'));
+    // html.css('overflow', 'hidden');
+    // window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
-    setTimeout(function () {
-        $("#site-gif").addClass("no-show");
+    // setTimeout(function () {
+    //     $("#site-gif").addClass("no-show");
 
-        var html = jQuery('html');
-        var scrollPosition = html.data('scroll-position');
-        html.css('overflow', html.data('previous-overflow'));
-        window.scrollTo(scrollPosition[0], scrollPosition[1])
-    }, 8700);
+    //     var html = jQuery('html');
+    //     var scrollPosition = html.data('scroll-position');
+    //     html.css('overflow', html.data('previous-overflow'));
+    //     window.scrollTo(scrollPosition[0], scrollPosition[1])
+    // }, 8700);
 
 }
 

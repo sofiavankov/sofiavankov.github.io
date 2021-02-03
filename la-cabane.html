@@ -16,7 +16,10 @@
 </head>
 
 <body>
-	<div class="navigation navigation--transparent">
+	<div class="logo logo--rel">
+		<a href="index.html"><img src="./assets/img/logo.png"></a>
+	</div>
+	<div class="navigation navigation--transparent navigation--rel">
 		<ul class="navigation__list">
 			<li class="navigation__item"><a id="portfolio" href="portfolioindex.html"><span>portfolio</span></a>
 			</li>
@@ -85,16 +88,91 @@
 			</div>
 		</section>
 	</div>
-
+	<div class="project--mobile">
+		<div class="project">
+			<img class="project__cover" src="./assets/img/ahla-cabane/cover.jpg">
+			<h1 class="project__title">LA CABANE</h1>
+			<p class="project__description">Branding for “La Cabane”, a honey and coffee brand based in Los
+				Angeles, California.
+			</p>
+			<p class="project__specs">
+				Type of work: Branding <br>
+				Realization: 2020
+			</p>
+			<div class="project__images">
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/ahla-cabane/img1.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/ahla-cabane/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/ahla-cabane/img2.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/ahla-cabane/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/ahla-cabane/img3.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/ahla-cabane/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/ahla-cabane/img4.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/ahla-cabane/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/ahla-cabane/img5.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/ahla-cabane/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/ahla-cabane/img6.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/ahla-cabane/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/ahla-cabane/img7.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/ahla-cabane/watermark.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/hps.js"></script>
 	<script type="text/javascript">
-		var scroller = new HPS('.page-wrapper', {
-			ease: 0.08,
-		});
+		document.addEventListener("DOMContentLoaded", function (event) {
+			if (window.innerWidth >= 1440) {
+				var scroller = new HPS('.page-wrapper', {
+					ease: 0.08,
+				});
 
-		window.onload = function () {
-			document.querySelector('.color-box').classList.add('slide');
-		}
+				window.onload = function () {
+					document.querySelector('.color-box').classList.add('slide');
+				}
+			}
+		});
+		window.addEventListener("resize", function () {
+			if (window.innerWidth >= 1440) {
+				var scroller = new HPS('.page-wrapper', {
+					ease: 0.08,
+				});
+
+				window.onload = function () {
+					document.querySelector('.color-box').classList.add('slide');
+				}
+				location.reload();
+			} else if (window.innerWidth < 1440) {
+				location.reload();
+			}
+
+		}, true);
 	</script>
 </body>
 

@@ -16,7 +16,10 @@
 </head>
 
 <body>
-	<div class="navigation navigation--transparent">
+	<div class="logo logo--rel">
+		<a href="index.html"><img src="./assets/img/logo.png"></a>
+	</div>
+	<div class="navigation navigation--transparent navigation--rel">
 		<ul class="navigation__list">
 			<li class="navigation__item"><a id="portfolio" href="portfolioindex.html"><span>portfolio</span></a>
 			</li>
@@ -27,7 +30,7 @@
 	<div class="page-wrapper">
 		<header class="content-parent" id="start">
 			<div class="color-box">
-				<div class="project">
+				<div class="project project--minpad">
 					<h1 class="project__title">OCTOPUS FINANCIAL CENTER</h1>
 					<p class="project__description">Branding for Octopus Financial Center an upcoming financial app that
 						organices, analyzes and integrates the user's finances to create an easier and more visual
@@ -110,16 +113,116 @@
 			</div>
 		</section>
 	</div>
-
+	<div class="project--mobile">
+		<div class="project">
+			<img class="project__cover" src="./assets/img/aboctopus-financial/cover.jpg">
+			<h1 class="project__title">OCTOPUS FINANCIAL CENTER</h1>
+			<p class="project__description">Branding for Octopus Financial Center an upcoming financial app that
+				organices, analyzes and integrates the user's finances to create an easier and more visual
+				perspective of expenses.
+			</p>
+			<p class="project__specs">
+				Type of work: Branding <br>
+				Realization: 2020
+			</p>
+			<div class="project__images">
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img1.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img2.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img3.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img4.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img5.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img6.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img7.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img8.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img9.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img10.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+				<div class="project__section">
+					<img class="project__content" src="./assets/img/aboctopus-financial/img11.jpg">
+					<div class="project__watermark">
+						<img class="" src="./assets/img/aboctopus-financial/watermark.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/hps.js"></script>
 	<script type="text/javascript">
-		var scroller = new HPS('.page-wrapper', {
-			ease: 0.08,
-		});
+		document.addEventListener("DOMContentLoaded", function (event) {
+			if (window.innerWidth >= 1440) {
+				var scroller = new HPS('.page-wrapper', {
+					ease: 0.08,
+				});
 
-		window.onload = function () {
-			document.querySelector('.color-box').classList.add('slide');
-		}
+				window.onload = function () {
+					document.querySelector('.color-box').classList.add('slide');
+				}
+			}
+		});
+		window.addEventListener("resize", function () {
+			if (window.innerWidth >= 1440) {
+				var scroller = new HPS('.page-wrapper', {
+					ease: 0.08,
+				});
+
+				window.onload = function () {
+					document.querySelector('.color-box').classList.add('slide');
+				}
+				location.reload();
+			} else if (window.innerWidth < 1440) {
+				location.reload();
+			}
+
+		}, true);
 	</script>
 </body>
 
