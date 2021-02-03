@@ -27,8 +27,6 @@ $(document).ready(function () {
 
     showProject();
 
-    removeText();
-
     $(".projects").addClass("show-projects");
 
 });
