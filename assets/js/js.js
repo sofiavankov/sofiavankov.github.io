@@ -23,7 +23,7 @@ $(document).ready(function () {
         $("#aboutspan").removeClass("underlined");
     });
 
-    playGif();
+    //playGif();
 
     showProject();
 

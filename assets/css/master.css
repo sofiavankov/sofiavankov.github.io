@@ -349,11 +349,7 @@ a:hover {
     cursor: pointer;
     color: #0000FF;
     position: relative;
-    display: inline-block;
     font-size: 30px;
-    line-height: 1em;
-    transform: scale(1, 0.8);
-    border: 0.1em solid transparent;
 }
 
 .home__button span {
@@ -369,136 +365,30 @@ a:hover {
     border: solid 0.1em transparent;
 }
 
-.home__button::after,
-.home__button::before {
-    content: '';
+.home__button span:hover {
+	font-style: italic;
+}
+
+.home__button span::after,
+.home__button span::before {
+    content: "";
     position: absolute;
-    background: #0000FF;
+    bottom: -2px;
+    width: 0px;
+    height: 2px;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: #0000FF;
+    left: 0;
 }
 
-.home__button:focus::before,
-.home__button:hover::before  {
-    animation: beforeBorders 0.5s forwards ease-in-out;
+.home__button span:hover::after,
+.home__button span:hover::before {
+    width: 100%;
+    opacity: 1;
 }
-
-.home__button:focus::after,
-.home__button:hover::after  {
-    animation: afterBorders 0.5s forwards ease-in-out;
-}
-
-.home__button:focus,
-.home__button:hover {
-    animation: borderColors 0.5s steps(1) forwards;
-    outline: none;
-} 
-
-.home__button:focus span {
-    animation: background calc(0.5s / 5 * 3) forwards ease-in-out;
-    animation-delay: calc(0.5s / 5 * 2);
-}
-
-.home__button:hover span {
-    animation: background calc(0.5s / 5 * 3) forwards ease-in-out;
-    animation-delay: calc(0.5s / 5 * 2);
-}
-
-@keyframes beforeBorders {
-    0% {
-		top: calc(0.1em * -1);
-		left: 50%;
-		bottom: auto;
-		right: auto;
-		width: 0;
-		height: 0.1em;
-    }
-    33% {    
-		top: calc(0.1em * -1);
-		left: calc(0.1em * -1);
-		bottom: auto;
-		right: auto;
-		width: calc(0.1em + 50%);
-		height: 0.1em;
-    }
-    66% {
-		top: calc(0.1em * -1);
-		left: calc(0.1em * -1);
-		bottom: auto;
-		right: auto;
-		width: 0.1em;
-		height: calc((0.1em * 2) + 100%);
-    }
-    100% {
-		top: auto;
-		left: calc(0.1em * -1);
-		bottom: calc(0.1em * -1);
-		right: auto;
-		width: calc(0.1em + 50%);
-		height: calc((0.1em * 2) + 100%);
-    }
-  }
-  
-  @keyframes afterBorders {
-    0% {
-		top: calc(0.1em * -1);
-		left: auto;
-		bottom: auto;
-		right: 50%;
-		width: 0;
-		height: 0.1em;
-    }
-    33% {    
-		top: calc(0.1em * -1);
-		left: auto;
-		bottom: auto;
-		right: calc(0.1em * -1);
-		width: calc(0.1em + 50%);
-		height: 0.1em;
-    }
-    66% {
-		top: calc(0.1em * -1);
-		left: auto;
-		bottom: auto;
-		right: calc(0.1em * -1);
-		width: 0.1em;
-		height: calc((0.1em * 2) + 100%);
-    }
-    100% {
-		top: auto;
-		left: auto;
-		bottom: calc(0.1em * -1);
-		right: calc(0.1em * -1);
-		width: calc(0.1em + 50%);
-		height: calc((0.1em * 2) + 100%);
-    }
-  }
-  
-  @keyframes borderColors {
-    0% {
-		border-top-color: transparent;
-		border-right-color: transparent;
-		border-bottom-color: transparent;
-		border-left-color: transparent;
-    }
-    33% {
-		border-top-color: #0000FF;
-		border-right-color: transparent;
-		border-bottom-color: transparent;
-		border-left-color: transparent;
-  
-    }
-    66% {
-		border-top-color: #0000FF;
-		border-right-color: #0000FF;
-		border-bottom-color: transparent;
-		border-left-color: #0000FF;
-    }
-    100% {
-		border-top-color: #0000FF;
-		border-right-color: #0000FF;
-		border-bottom-color: #0000FF;
-		border-left-color: #0000FF;
-    }
-  }
 
 /* about */
 
@@ -542,7 +432,7 @@ a:hover {
 .about__text {
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 26px;
+	line-height: 36px;
 }
 
 .about__text:first-of-type {
@@ -563,14 +453,13 @@ a:hover {
 }
 
 .text__medium {
-	font-size: 30px;
-	font-weight: 500;
+	font-size: 18px;
+	font-weight: 400;
 }
 
 .text__mediumitalic {
-	font-size: 30px;
+	font-size: 18px;
 	font-weight: 500;
-	font-style: italic;
 }
 
 .about__footer {
@@ -636,6 +525,10 @@ a:hover {
 	cursor: pointer;
 	text-decoration: none;
 	text-transform: none;
+}
+
+.contact__item p {
+    font-weight: 500;
 }
 
 .contact__item span {
@@ -866,7 +759,7 @@ a:hover {
 }
 
 .project__cover {
-	height: 200px;
+	height: 400px;
     width: 100%;
     object-fit: cover;
 }
@@ -940,7 +833,7 @@ $screen-jumbo:                  1920px; */
 
 @media only screen and (min-width: 768px) {
 	.logo img {
-		height: 70px;
+		height: 60px;
 	}
 	
 	.navigation {
@@ -979,6 +872,14 @@ $screen-jumbo:                  1920px; */
 	}
 	
 	.about__text {
+		font-size: 22px;
+	}
+
+	.text__medium {
+		font-size: 22px;
+	}
+	
+	.text__mediumitalic {
 		font-size: 22px;
 	}
 
