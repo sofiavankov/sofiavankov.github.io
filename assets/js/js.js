@@ -23,6 +23,14 @@ $(document).ready(function () {
         $("#aboutspan").removeClass("underlined");
     });
 
+
+    if ($(window).width() < 1400) {
+        $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-movil.gif')");
+    } else {
+        $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio.gif')");
+    }
+
+
     //playGif();
 
     showProject();

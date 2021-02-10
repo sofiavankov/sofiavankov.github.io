@@ -142,8 +142,8 @@
       //temp
       arrowLeft.style.cssText = 'font-size: 26px;outline: none;';
       arrowRight.style.cssText = 'font-size: 26px;outline: none;';
-      arrowLeft.innerText = '←';
-      arrowRight.innerText = '→';
+      arrowLeft.innerText = '⟵';
+      arrowRight.innerText = '⟶';
       //temp
       controlsNode.appendChild(arrowLeft);
       controlsNode.appendChild(arrowRight);
