@@ -159,7 +159,7 @@ a:hover {
 #site-gif {
 	width: 100%;
 	background: url(../img/inicio.gif);
-	z-index: 99999;
+	z-index: 99998;
 	opacity: 1;
 	object-fit: cover;
 	background-repeat: no-repeat;
@@ -167,6 +167,22 @@ a:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+#site-gif-counter {
+	width: 200px;
+	height: 200px;
+	background: url(../img/seconds.gif);
+	z-index: 99999;
+	opacity: 1;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -300px;
 }
 
 .logo {
@@ -192,7 +208,7 @@ a:hover {
 }
 
 .no-show {
-	height: 0;
+	height: 0!important;
 }
 
 .slide {
@@ -705,7 +721,7 @@ a:hover {
     margin: 0 auto;
 	padding: 0 20px;
     position: relative;
-	font-weight: 800;
+	font-weight: 300;
     transition: font-style 1s ease-in-out;
 }
 

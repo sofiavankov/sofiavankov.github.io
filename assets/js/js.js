@@ -24,14 +24,17 @@ $(document).ready(function () {
     });
 
 
-    if ($(window).width() < 1400) {
+    if ($(window).width() < 768) {
+        $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-iphone.gif')");
+    } else if ($(window).width() < 1430) {
         $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-movil.gif')");
     } else {
         $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio.gif')");
     }
 
-
-    playGif();
+    if (window.location.href.indexOf("index") > -1) {
+        playGif();
+    }
 
     showProject();
 
@@ -51,13 +54,17 @@ function playGif() {
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
     setTimeout(function () {
+        $("#site-gif-counter").addClass("no-show");
+    }, 7900);
+
+    setTimeout(function () {
         $("#site-gif").addClass("no-show");
 
         var html = jQuery('html');
         var scrollPosition = html.data('scroll-position');
         html.css('overflow', html.data('previous-overflow'));
         window.scrollTo(scrollPosition[0], scrollPosition[1])
-    }, 8700);
+    }, 8000);
 }
 
 function showProject() {
