@@ -23,24 +23,49 @@ $(document).ready(function () {
         $("#aboutspan").removeClass("underlined");
     });
 
-
-    if ($(window).width() < 768) {
-        $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-iphone.gif')");
-    } else if ($(window).width() < 1430) {
-        $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-movil.gif')");
+    if (localStorage.getItem("start") === null) {
+        setLocal();
+        if ((window.location.href.indexOf("index") > -1) && ($(window).width() <= 1024)) {
+            //$("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-movil.gif')");
+            $("#site-gif-img").attr("src", "../sofiavankov.github.io/assets/img/inicio-movil.gif");
+            playGif();
+        } else if ((window.location.href.indexOf("index") > -1) && $(window).width() >= 1400) {
+            playGif();
+        }
     } else {
-        $("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio.gif')");
+        dontShow();
     }
 
-    if (window.location.href.indexOf("index") > -1) {
-        playGif();
-    }
+    setInterval(function () {
+        checkExpiration();
+    }, 900000);
+
 
     showProject();
 
     $(".projects").addClass("show-projects");
 
 });
+
+function setLocal() {
+    var today = new Date();
+    localStorage.setItem("start", today);
+}
+
+function checkExpiration() {
+    var ONE_HOUR = 60 * 60 * 1000;
+    var oldDate = localStorage.getItem("start");
+    oldDate = Date.parse(oldDate);
+    var currentDate = new Date();
+
+    if ((currentDate - oldDate) > ONE_HOUR) {
+        localStorage.removeItem("start");
+    }
+}
+
+function dontShow() {
+    $("#site-gif").addClass("hide");
+}
 
 function playGif() {
     var scrollPosition = [
@@ -54,57 +79,58 @@ function playGif() {
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
     setTimeout(function () {
-        $("#site-gif-counter").addClass("no-show");
-    }, 7900);
-
-    setTimeout(function () {
         $("#site-gif").addClass("no-show");
 
         var html = jQuery('html');
         var scrollPosition = html.data('scroll-position');
         html.css('overflow', html.data('previous-overflow'));
         window.scrollTo(scrollPosition[0], scrollPosition[1])
-    }, 8000);
+    }, 6700);
+
+    setTimeout(function () {
+        $("#site-gif").addClass("hide");
+    }, 6740);
+
 }
 
 function showProject() {
     $("#project-1").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img1.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img1.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-2").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img2.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img2.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-3").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img3.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img3.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-4").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img4.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img4.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-5").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img5.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img5.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-6").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img6.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img6.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-7").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img7.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img7.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
     $("#project-8").hover(function () {
-        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img8.jpg')");
+        $(".projects__image").css("background-image", "url('../sofiavankov.github.io/assets/img/cover/img8.png')");
     }, function () {
         $(".projects__image").css("background-image", "none");
     });
