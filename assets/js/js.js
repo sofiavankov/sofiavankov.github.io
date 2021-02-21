@@ -30,6 +30,7 @@ $(document).ready(function () {
             $("#site-gif-img").attr("src", "../sofiavankov.github.io/assets/img/inicio-movil.gif");
             playGif();
         } else if ((window.location.href.indexOf("index") > -1) && $(window).width() >= 1400) {
+            $("#site-gif-img").attr("src", "../sofiavankov.github.io/assets/img/inicio.gif");
             playGif();
         }
     } else {
