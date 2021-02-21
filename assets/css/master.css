@@ -383,7 +383,7 @@ a:hover {
     cursor: pointer;
     color: #0000FF;
     position: relative;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .home__button span {
@@ -526,7 +526,8 @@ a:hover {
     left: 8%; */
     height: 70%;
 	/* width: 85%; */
-	width: 100%;
+	width: 94%;
+	margin: 0 auto;
     border-radius: 50%;
     border: 1px solid #0000FF;
 }
@@ -550,8 +551,8 @@ a:hover {
 
 .contact__item {
 	margin-bottom: 40px;
-	line-height: 26px;
-	font-size: 26px;
+	line-height: 22px;
+	font-size: 22px;
 }
 
 .contact__item a {
@@ -880,6 +881,15 @@ $screen-jumbo:                  1920px; */
 @media only screen and (min-width: 768px) {
 	.logo img {
 		height: 60px;
+	}
+
+	.home__button {
+		font-size: 30px;
+	}
+
+	.contact__item {
+		line-height: 26px;
+		font-size: 26px;
 	}
 	
 	.navigation {
