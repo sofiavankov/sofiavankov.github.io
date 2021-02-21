@@ -209,6 +209,10 @@ a:hover {
 
 .logo--rel {
 	position: relative;
+	padding-top: 20px;
+	padding-left: 20px;
+	top: 0;
+	left: 0;
 }
 
 .show {
