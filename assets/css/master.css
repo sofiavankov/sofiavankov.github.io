@@ -207,6 +207,10 @@ a:hover {
 	position: relative;
 }
 
+.logo--rel {
+	position: relative;
+}
+
 .show {
 	opacity: 1;
 	transition: opacity .2s ease-out;
@@ -522,7 +526,7 @@ a:hover {
     left: 8%; */
     height: 70%;
 	/* width: 85%; */
-	width: calc(80% - 80px);
+	width: 100%;
     border-radius: 50%;
     border: 1px solid #0000FF;
 }
@@ -746,7 +750,6 @@ a:hover {
 .projects__item span {
     text-align: center;
     margin: 0 auto;
-	padding: 0 20px;
     position: relative;
 	font-weight: 300;
     transition: font-style 1s ease-in-out;
@@ -795,7 +798,7 @@ a:hover {
 	color: #0000FF;
     font-weight: 300;
 	margin-top: 0;
-	font-size: 60px;
+	font-size: 55px;
     padding: 40px 30px 40px;
     margin: 0;
 }
