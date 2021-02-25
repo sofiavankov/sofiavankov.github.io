@@ -23,23 +23,23 @@ $(document).ready(function () {
         $("#aboutspan").removeClass("underlined");
     });
 
-    if (localStorage.getItem("start") === null) {
-        setLocal();
-        if ((window.location.href.indexOf("index") > -1) && ($(window).width() <= 1024)) {
-            //$("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-movil.gif')");
-            $("#site-gif-img").attr("src", "../sofiavankov.github.io/assets/img/inicio-movil.gif");
-            playGif();
-        } else if ((window.location.href.indexOf("index") > -1) && $(window).width() >= 1400) {
-            $("#site-gif-img").attr("src", "../sofiavankov.github.io/assets/img/inicio.gif");
-            playGif();
-        }
-    } else {
-        dontShow();
+    // if (localStorage.getItem("start") === null) {
+    //     setLocal();
+    if ((window.location.href.indexOf("index") > -1) && ($(window).width() <= 1024)) {
+        //$("#site-gif").css("background-image", "url('../sofiavankov.github.io/assets/img/inicio-movil.gif')");
+        $("#site-gif-img").attr("src", "../sofiavankov.github.io/assets/img/inicio-movil.gif");
+        playGif();
+    } else if ((window.location.href.indexOf("index") > -1) && $(window).width() >= 1400) {
+        $("#site-gif-img").attr("src", "../sofiavankov.github.io/assets/img/inicio.gif");
+        playGif();
     }
+    // } else {
+    // dontShow();
+    // }
 
-    setInterval(function () {
-        checkExpiration();
-    }, 900000);
+    // setInterval(function () {
+    //     checkExpiration();
+    // }, 900000);
 
 
     showProject();
@@ -48,25 +48,25 @@ $(document).ready(function () {
 
 });
 
-function setLocal() {
-    var today = new Date();
-    localStorage.setItem("start", today);
-}
+// function setLocal() {
+//     var today = new Date();
+//     localStorage.setItem("start", today);
+// }
 
-function checkExpiration() {
-    var ONE_HOUR = 60 * 60 * 1000;
-    var oldDate = localStorage.getItem("start");
-    oldDate = Date.parse(oldDate);
-    var currentDate = new Date();
+// function checkExpiration() {
+//     var ONE_HOUR = 60 * 60 * 1000;
+//     var oldDate = localStorage.getItem("start");
+//     oldDate = Date.parse(oldDate);
+//     var currentDate = new Date();
 
-    if ((currentDate - oldDate) > ONE_HOUR) {
-        localStorage.removeItem("start");
-    }
-}
+//     if ((currentDate - oldDate) > ONE_HOUR) {
+//         localStorage.removeItem("start");
+//     }
+// }
 
-function dontShow() {
-    $("#site-gif").addClass("hide");
-}
+// function dontShow() {
+//     $("#site-gif").addClass("hide");
+// }
 
 function playGif() {
     var scrollPosition = [

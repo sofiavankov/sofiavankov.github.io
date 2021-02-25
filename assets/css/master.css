@@ -528,7 +528,7 @@ a:hover {
 	position: absolute;
     /* top: 23%;
     left: 8%; */
-    height: 70%;
+    height: 60%;
 	/* width: 85%; */
 	width: 94%;
 	margin: 0 auto;
@@ -997,7 +997,7 @@ $screen-jumbo:                  1920px; */
 	}
 	
 	.navigation--rel .navigation__list {
-		padding-right: 80px;
+		padding-right: 40px;
 		padding-top: 0;
 		justify-content: flex-end;
 	}
@@ -1162,8 +1162,7 @@ $screen-jumbo:                  1920px; */
 		padding-top: 0;
 	}
 
-	.logo {
-		top: 20px;
-    	left: 20px;
+	.logo--rel {
+		padding-top: 20px;
 	}
 }
