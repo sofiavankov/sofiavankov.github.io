@@ -23,30 +23,13 @@
 
 <body>
     <div class="site">
-        <div class="outer-wrapper">
+        <div class="outer-wrapper--nomin">
             <div class="logo">
                 <a href="index.html"><img src="./assets/img/logo--black.png"></a>
             </div>
-            <div class="main-contain">
-                <div class="content">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="assets/img/inicio/inicio1.jpg" alt="Los Angeles" style="width:100%;">
-                            </div>
-
-                            <div class="item">
-                                <img src="assets/img/inicio/inicio2.jpg" alt="Chicago" style="width:100%;">
-                            </div>
-
-                            <div class="item">
-                                <img src="assets/img/inicio/inicio3.jpg" alt="New york" style="width:100%;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="main-contain main-contain--left">
                 <div class="navigation">
-                    <ul class="navigation__list">
+                    <ul class="navigation__list navigation__list--left">
                         <li class="navigation__item"><a id="about" href="about.html"><span>about</span></a></li>
                         <li class="navigation__item"><a id="ourwork" href="ourwork.html"><span>our work</span></a>
                         </li>
@@ -58,6 +41,27 @@
                         <li class="navigation__item"><a id="contact" href="contact.html"><span>contact</span></a>
                         </li>
                     </ul>
+                </div>
+                <div class="content content--small">
+                    <div class="grid hide">
+                        <div class="row row-sa">
+                            <div class="col-sm-6">
+                                <img src="assets/img/a-amapa/img1.jpg" style="width:100%;">
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="assets/img/a-amapa/img2.jpg" style="width:100%;">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="full">
+                        <img src="assets/img/a-amapa/img1.jpg" style="width:100%;">
+                        <img src="assets/img/a-amapa/img2.jpg" style="width:100%;">
+                    </div>
+                </div>
+                <div class="view-button">
+                    <i class="fas fa-th" id="grid"></i>
+                    <i class="far fa-square hide" id="full"></i>
                 </div>
             </div>
         </div>
