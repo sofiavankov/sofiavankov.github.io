@@ -10,6 +10,18 @@ $(document).ready(function () {
             $("#grid").removeClass("hide");
         }
     });
+
+    if (($(window).width() > 1400)) {
+        $("#site-gif-img").attr("src", "./assets/img/inicio.gif");
+    }
+
+    setTimeout(function () {
+        $("#site-gif").addClass("no-show");
+    }, 6000);
+
+    setTimeout(function () {
+        $("#site-gif").addClass("hide");
+    }, 6040);
 });
 
 function gridToggle() {

@@ -7,6 +7,37 @@ body {
   height: 100%; 
 }
 
+#site-gif {
+	width: 100%;
+	z-index: 99998;
+	opacity: 1;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+
+#site-gif img{
+	height: 100vh;
+	margin: 0 auto;
+	width: 100%;
+	object-fit: cover;
+}
+
+.show {
+	opacity: 1;
+	transition: opacity .2s ease-out;
+}
+
+.no-show {
+	opacity: 0!important;
+}
+
+.hide {
+	visibility: hidden;
+}
+
 .site {
 	max-width: 1440px;
 	margin: 0 auto;
@@ -19,12 +50,6 @@ body {
 
 .outer-wrapper--nomin {
 	height: auto;
-}
-
-.main-contain {
-	display: flex;
-	padding-left: 200px;
-	padding-right: 100px;
 }
 
 .main-contain--left {
@@ -62,6 +87,9 @@ body {
     justify-content: space-between;
 }
 
+.main-contain {
+	padding: 0 20px;
+}
 
 .logo img{
 	height: 30px;
@@ -73,6 +101,10 @@ body {
 
 .carousel {
 	display: none;
+}
+
+.carousel--show {
+	display: block;
 }
 
 .carousel-inner {
@@ -336,6 +368,12 @@ body {
 	.full {
 		padding-right: 40px;
 	}
+
+	.main-contain {
+		display: flex;
+		padding-left: 60px;
+		padding-right: 100px;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -358,6 +396,10 @@ body {
 @media only screen and (min-width: 1280px) {
 	.ourwork {
 		display: none;
+	}
+
+	.main-contain {
+		padding-left: 200px;
 	}
 
 	.carousel {
