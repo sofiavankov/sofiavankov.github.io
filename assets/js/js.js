@@ -1,5 +1,15 @@
 $(document).ready(function () {
     gridToggle();
+
+    $(window).on('resize', function () {
+        var win = $(this); //this = window
+        if (win.width() < 1440) {
+            $(".grid").addClass("hide");
+            $(".full").removeClass("hide");
+            $("#full").addClass("hide");
+            $("#grid").removeClass("hide");
+        }
+    });
 });
 
 function gridToggle() {
