@@ -11,17 +11,20 @@ $(document).ready(function () {
         }
     });
 
-    if (($(window).width() > 1400)) {
-        $("#site-gif-img").attr("src", "./assets/img/inicio.gif");
+    if (($(window).width() < 1400)) {
+        // $("#site-gif-img").attr("src", "./assets/img/inicio.mp4");
+        // $('#site-gif-img').autoplay = true;
+        // $('#site-gif-img').load();
+        $("#site-gif").addClass("no-show");
+        $("#site-gif").addClass("hide");
+        $("#site-gif-img").attr("src", "");
+        $("#site-gif-img").css("z-index", "0");
     }
 
-    setTimeout(function () {
+    $('#site-gif-img').on('ended', function () {
         $("#site-gif").addClass("no-show");
-    }, 6000);
-
-    setTimeout(function () {
         $("#site-gif").addClass("hide");
-    }, 6040);
+    });
 });
 
 function gridToggle() {
